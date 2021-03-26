@@ -35,7 +35,7 @@ flask run
 
 2 / Allumer une LED à chaque mesure pendant 200ms
 
-**Une fois les branchements réalisés, on fait clignoter la led à intervalle régulier**
+**Une fois les branchements réalisés, on fait clignoter la led.**
 
 <div style="text-align:center">
     <img src="./assets/blink.gif" alt="drawing" width="200"/>
@@ -57,7 +57,7 @@ flask run
 
 4 / Ecrire un programme dans le langage de votre choix qui lira la valeur du capteur
 
-**Pour récupérer ces données, on écrit on programme simple sur l'IDE Arduino**
+**Pour récupérer ces données, on écrit un programme simple sur l'IDE Arduino**
 
 <div style="text-align:center">
     <img src="./assets/script.jpg" alt="drawing" width="200"/>
@@ -77,10 +77,11 @@ flask run
 
 6 / Bonus: Permettre via l'API du Raspberry, d'inverser le clignotement de la LED (reste allumée en permanence mais s'éteint 200ms à chaque mesure)
 
-**On crée une route pour modifier le clignotement de la led.**
+**On crée une route ```/led``` pour modifier le clignotement de la led et on modifie le script.**
 
 <div style="text-align:center">
     <img src="./assets/blink-reverse.gif" alt="drawing"/>
+    <img src="./assets/script2.jpg" alt="drawing" width="300"/>
 </div>
 
 ---
