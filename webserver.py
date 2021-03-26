@@ -11,7 +11,7 @@ ser.flush()
 @app.route('/luminosity', methods=['GET'])
 def luminosity():
     data = raspberry_data()
-    return data
+    return jsonify(data)
 
 
 @app.route('/led', methods=['GET', 'POST'])
@@ -22,13 +22,7 @@ def led():
 
 def raspberry_data():
     if ser.in_waiting > 0:
-        jsonString = ser.readline().decode('utf-8').rstrip()
-        try:
-            jsonObject = json.loads(jsonString)
-            print(jsonObject["lumen"])
-            return jsonObject
-        except:
-            pass
+        return ser.readline().decode('utf-8').rstrip()
     return -1
 
 
