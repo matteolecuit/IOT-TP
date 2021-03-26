@@ -50,16 +50,28 @@ flask run
 **On connecte ensuite le raspberry à l'arduino pour qu'il récupère les données**
 
 <div style="text-align:center">
-    <!-- <img src="./assets/blink.gif" alt="drawing" width="200"/> -->
+    <img src="./assets/montage2.jpg" alt="drawing" width="200"/>
 </div>
 
  ---
 
 4 / Ecrire un programme dans le langage de votre choix qui lira la valeur du capteur
 
+**Pour récupérer ces données, on écrit on programme simple sur l'IDE Arduino**
+
+<div style="text-align:center">
+    <!-- <img src="./assets/program.jpg" alt="drawing" width="200"/> -->
+</div>
+
  ---
 
 5 / Bonus: Ecrire un serveur Web qui expose la valeur sur une API (langage de votre choix)
+
+**Pour le serveur Web, nous avons décidé d'utiliser Flask, qui est un framework Python qui nous permet ici de développer une API et une interface web à partir d'un projet**
+
+<div style="text-align:center">
+    <!-- <img src="./assets/program.jpg" alt="drawing" width="200"/> -->
+</div>
 
  ---
 
