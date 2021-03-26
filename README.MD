@@ -77,6 +77,12 @@ flask run
 
 6 / Bonus: Permettre via l'API du Raspberry, d'inverser le clignotement de la LED (reste allumée en permanence mais s'éteint 200ms à chaque mesure)
 
+**On crée une route pour modifier le clignotement de la led.**
+
+<div style="text-align:center">
+    <img src="./assets/blink-reverse.gif" alt="drawing"/>
+</div>
+
 ---
 
 ## Contributors
