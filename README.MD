@@ -1,3 +1,20 @@
+# Start the program
+
+## Setup env
+```
+pip3 install flask
+export FLASK_APP=webserver
+export FLASK_ENV=development
+```
+
+### Run the web server
+```
+flask run
+```
+
+
+## Instructions
+
 1 / Capteur sur l'arduino
 - Branchement
 - Récupération de la valeur toutes les 500ms
