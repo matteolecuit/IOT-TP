@@ -1,25 +1,27 @@
-#define LED 13
-#define LUM A1
-
-int state = HIGH;
+#define ledPin 13;
+#define lumPin A1;
 
 void setup() {
+  // put your setup code here, to run once:
   Serial.begin(9600);
-  pinMode(LED, OUTPUT);
-  pinMode(LUM, INPUT);
+  pinMode(lumPin, INPUT);
+  pinMode(ledPin, OUTPUT);
 }
 
+int val = HIGH;
+
 void loop() {
-  String test = "{ 'lumen' : ";
-  String json = test + analogRead(LUM);
-  String json2 = json + "}";
-  digitalWrite(LED, state);
+  String json1 = "{ \"lumen\" : ";
+  String json4 = json1 + analogRead(lumPin);
+  Serial.println(json4 + "}");
+
+  digitalWrite(ledPin, val);
   delay(200);
-  digitalWrite(LED, !state);
-  Serial.print(json2);
+  digitalWrite(ledPin, !val);
+  
   delay(300);
 }
 
-void toggle(){
-  state = !state;
+void toggle_val(){
+  val = !val;
 }

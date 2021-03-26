@@ -28,6 +28,7 @@ def raspberry_data():
         jsonString = ser.readline().decode('utf-8').rstrip()
         try:
             jsonObject = json.loads(jsonString)
+            print(jsonObject["lumen"])
             return jsonObject["lumen"]
         except:
             pass
