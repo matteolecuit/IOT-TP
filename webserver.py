@@ -19,13 +19,14 @@ def led():
     ser.write(b"toggle\n")
     return jsonify(success=True)
 
+
 def raspberry_data():
     if ser.in_waiting > 0:
         jsonString = ser.readline().decode('utf-8').rstrip()
         try:
             jsonObject = json.loads(jsonString)
             print(jsonObject["lumen"])
-            return jsonObject["lumen"]
+            return jsonObject
         except:
             pass
     return -1
