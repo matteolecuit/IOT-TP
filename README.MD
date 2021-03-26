@@ -60,7 +60,7 @@ flask run
 **Pour récupérer ces données, on écrit on programme simple sur l'IDE Arduino**
 
 <div style="text-align:center">
-    <!-- <img src="./assets/program.jpg" alt="drawing" width="200"/> -->
+    <img src="./assets/script.jpg" alt="drawing" width="200"/>
 </div>
 
  ---
@@ -70,7 +70,7 @@ flask run
 **Pour le serveur Web, nous avons décidé d'utiliser Flask, qui est un framework Python qui nous permet ici de développer une API et une interface web à partir d'un projet**
 
 <div style="text-align:center">
-    <!-- <img src="./assets/program.jpg" alt="drawing" width="200"/> -->
+    <img src="./assets/results.png" alt="drawing"/>
 </div>
 
  ---
