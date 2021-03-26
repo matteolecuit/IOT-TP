@@ -9,6 +9,7 @@ void setup() {
 }
 
 int val = HIGH;
+int s = 0;
 
 void loop() {
   String json1 = "{ \"lumen\" : ";
@@ -19,13 +20,11 @@ void loop() {
   delay(200);
   digitalWrite(ledPin, !val);
   
-  delay(300);
-
-  if (Serial.available() > 0) {
-    String data = Serial.readString();
-    Serial.print("You sent me: ");
-    Serial.println(data);
+  delay(1000);
+  
+  if (Serial.available() > s) {
     toggle_val();
+    s = Serial.available();
   }
 }
 
