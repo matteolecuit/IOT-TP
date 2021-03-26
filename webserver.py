@@ -1,6 +1,5 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, jsonify
 import serial
-import json
 
 app = Flask(__name__)
 # initialize Serial
@@ -10,8 +9,7 @@ ser.flush()
 
 @app.route('/luminosity', methods=['GET'])
 def luminosity():
-    data = raspberry_data()
-    return jsonify(data)
+    return raspberry_data()
 
 
 @app.route('/led', methods=['GET', 'POST'])
