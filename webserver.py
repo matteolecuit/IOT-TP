@@ -2,7 +2,9 @@ from flask import Flask, render_template, request
 import serial, json
 
 app = Flask(__name__)
-
+# initialize Serial
+ser = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
+ser.flush()
 
 @app.route('/temperature', methods=['GET'])
 def temperature():
