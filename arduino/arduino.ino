@@ -1,5 +1,5 @@
-#define ledPin 13;
-#define lumPin A1;
+#define ledPin 13
+#define lumPin A1
 
 void setup() {
   // put your setup code here, to run once:
@@ -20,6 +20,13 @@ void loop() {
   digitalWrite(ledPin, !val);
   
   delay(300);
+
+  if (Serial.available() > 0) {
+    String data = Serial.readString();
+    Serial.print("You sent me: ");
+    Serial.println(data);
+    toggle_val();
+  }
 }
 
 void toggle_val(){
