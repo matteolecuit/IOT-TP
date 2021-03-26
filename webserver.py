@@ -11,7 +11,7 @@ ser.flush()
 @app.route('/luminosity', methods=['GET'])
 def luminosity():
     data = raspberry_data()
-    return jsonify(data)
+    return data
 
 
 @app.route('/led', methods=['GET', 'POST'])
