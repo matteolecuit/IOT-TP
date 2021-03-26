@@ -4,24 +4,20 @@ import json
 
 app = Flask(__name__)
 # initialize Serial
-ser = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
+ser = serial.Serial('/dev/ttyACM1', 9600, timeout=1)
 ser.flush()
 
 
-@app.route('/temperature', methods=['GET'])
-def temperature():
+@app.route('/luminosity', methods=['GET'])
+def luminosity():
     data = raspberry_data()
     return jsonify(data)
 
 
-@app.route('/light', methods=['GET', 'POST'])
-def light():
-    if request.method == 'GET':
-        data = {"light": "0"}
-        return render_template('light.html', data=data)
-    if request.method == 'POST':
-        return True
-
+@app.route('/led', methods=['GET', 'POST'])
+def led():
+    ser.write(b"toggle\n")
+    return jsonify(success=True)
 
 def raspberry_data():
     if ser.in_waiting > 0:
@@ -34,4 +30,4 @@ def raspberry_data():
     return -1
 
 
-app.run(host='localhost', port=5000)
+app.run(host='0.0.0.0')
